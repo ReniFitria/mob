@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SIPBS Mobile</title>
+	<link rel="stylesheet"  href="public/css/themes/default/jquery.mobile-1.3.1.min.css">
+	<link rel="stylesheet"  href="public/css/themes/default/jquery.mobile-1.3.1.css">
+	<link rel="stylesheet" href="public/demo/css/jqm-demos.css">
+	<link rel="stylesheet" href="public/css/table2.css">
+    <link rel="stylesheet" href="public/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="public/bootstrap/css/bootstrap.min.css">
+	<script src="public/js/jquery.js"></script>
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<script src="public/demo/js/jquery.mobile.demos.js"></script>
+	<script src="public/js/jquery.mobile-1.3.1.min.js"></script>
+    <script src="public/bootstrap/js/bootstrap.min.js"></script>
+	<script src="public/bootstrap/js/bootstrap.js"></script>
+	<script src="proses/laporantrans.js"></script> 
+</head>
+<body style="background-color:#CCC;">
+<div data-role="page" class="jqm-demos">
+
+    <div data-role="header" class="jqm-header" data-position="fixed">
+		<h1 class="jqm-logo"><a href="#"><font face="elephant" color="DarkGreen">BANK SAMPAH HIDAYAH</font></a></h1>
+        <a href="#" class="jqm-navmenu-link" data-icon="bars" data-iconpos="notext">Navigation</a>
+	</div><!-- /header -->
+
+    
+    
+    <div data-role="content">
+	<div id="loading_panel" style="display:none;text-align:center;">
+            	<b>Please Waiting...!</b>
+                <br><br>
+            	<div class="progress progress-striped active">
+            		<div class="bar" style="width: 100%;"></div>
+        		</div>
+            </div>
+            
+            <div id="conn_failed" style="display:none;text-align:center;color:#F00;">
+            	<div class="alert alert-danger">
+                	<strong>Connection Failed...! Please try again</strong>
+            	</div>
+                <br><br><br>
+                <a href="laporantrans" data-role="button" data-inline="true" data-icon="check" data-theme="b" data-ajax="false">Back</a>
+            </div>
+            
+              <div id="required" class="alert alert-danger" style="display:none;">
+                <strong>Your data is not complete</strong>
+              </div>
+              
+              <div id="empty" class="alert alert-danger" style="display:none;">
+                <strong>Data is empty</strong>
+              </div>
+            
+            <div id="tampilData" style="display:none;text-align:center;">
+				<ul id="laporan" data-role="listview" data-divider-theme="f">
+          			<li data-role="list-divider" data-theme="a">LAPORAN TRANSAKSI</li>
+         		</ul>
+            </div>
+		<div id="form">
+	    <form style="margin-top:-8px;">
+			<div class="ui-field-contain">
+			<label><center><font face="broadway" color="green">LAPORAN TRANSAKSI</font></center></label><br/>
+			<label for="tanggal_awal">Dari Tanggal:</label>
+			<input type="date" name="tanggal_awal" id="tanggal_awal"><br/>     
+			<label for="tanggal_akhir">Sampai Tanggal:</label>
+			<input type="date" name="tanggal_akhir" id="tanggal_akhir">
+			</div>
+			<p>
+                 <a href="#" id="proses" data-role="button" data-inline="true" data-icon="check" data-theme="a" data-ajax="false">Submit</a>
+            </p>
+		</form>
+		</div>
+    </div><!-- /content -->
+    
+    
+    
+    <div data-role="panel" class="jqm-nav-panel jqm-navmenu-panel" data-position="left" data-display="reveal" data-theme="c">
+        <ul data-role="listview" data-theme="a" data-divider-theme="b" class="jqm-list">
+			<li><a href="utama" data-ajax="false" data-rel="page" data-transition="slide" data-inline="true"><img src="public/css/menu/home.jpg" class="ui-li-icon ui-corner-none">HOME</a></li>
+			<li><a href="datanasabah" data-ajax="false" data-rel="page" data-transition="slide" data-inline="true"><img src="public/css/menu/user.png" class="ui-li-icon ui-corner-none">Data Nasabah</a></li>
+            <li><a href="dashboard" data-ajax="false" data-rel="page" data-transition="slide" data-inline="true"><img src="public/css/menu/create.png" class="ui-li-icon ui-corner-none">Input Nasabah</a></li>
+            <li><a href="laporantrans" data-ajax="false" data-rel="page" data-transition="slide" data-inline="true"><img src="public/css/menu/epg.png" class="ui-li-icon ui-corner-none">Laporan Transaksi</a></li>
+			<li><a href="laporanjual" data-ajax="false" data-rel="page" data-transition="slide" data-inline="true"><img src="public/css/menu/money.png" class="ui-li-icon ui-corner-none">Laporan Penjualan</a></li>
+			<li><a href="index" data-ajax="false" data-rel="page" data-transition="slide" data-inline="true"><img src="public/css/menu/keluar.png" class="ui-li-icon ui-corner-none">LOGOUT</a></li>
+        </ul>
+	</div><!-- /panel -->
+    
+    
+
+</div><!-- /page -->
+</body>
+</html>
